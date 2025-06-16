@@ -3,49 +3,140 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+      font-family: "Source Code Pro", monospace;
 }
 
 header{
-    /* border: 1px solid red; */
     display: flex;
     margin: auto;
     justify-content: space-between;
-    width: 90%;
+    width: 95%;
+    height: 5em;
 }
 .top-container{
     display: flex;
     gap: 0.625px;
     margin: auto 0;
 }
-i{
-    font-size: 1.875px;
+header a {
+    color:black ;
+    text-decoration: none;
+}
+.top-container h1{
     margin: auto;
+}
+i{
+    font-size: 1.875rem;
+    margin: auto;
+    margin-right: 0.4em;
 }
 ul{
     list-style: none;
     display: flex;
-    gap: 1.875rem
-    ;
+    gap: 1.875rem;
     margin: auto 0;
     font-size: 1.25rem;
     font-weight: 600;
+   
 }
 
 .img-section{
-    margin: 0;
     height:50%;
     width: 100%;
-    /* border: 1px solid red; */
     background-image: url('images/desk.webp');
     background-size:cover;
     background-position: center;
-    color: whitesmoke;
-    position: relative;
+    color: #FFF;
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 .first-paragraph{
     width: 90%;
-    margin: auto;
-    align-self: flex-end;
-    justify-self: end;
+    margin:  0 auto;
+    color: #FFF;
+    margin-bottom: 2%;
+    text-shadow: 2px 2px 1px rgb(2, 2, 2);
+}
+.paragraph{
+    width: 40%;
+}
+date{
+    font-size: 0.8rem;
+}
+.paragraph h1{
+    font-size: 1.5rem;
+}
+.paragraph p{
+    font-size: 0.8rem;
+}
+.paragraph p, h1{
+    margin:0;
+    margin-top: 0.4em;
 }
 
+main{
+    width: 65%;
+    margin: auto;
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 3rem;
+}
+.container{
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+
+}
+.container img{
+    height:50%;
+}
+.container p{
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    color: #505050;
+}
+
+.container img{
+    border-radius: 5px;
+    width: 100%;
+    margin: 0;
+}
+.container:hover{
+    filter: brightness(0.9);
+    box-shadow: 0 0 0 3px rgba(59, 57, 59, 0.5);
+}
+
+.view-more{
+    text-align: center;
+    padding: 2em;
+}
+.view-more a{
+    color: black;
+    font-weight: 700;
+}
+
+footer{
+    background-color: #202020;
+    color: white;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer h1{
+    font-size: 1rem;
+}
+footer h1, p{
+    margin: 0;
+}
+footer div{
+    width:fit-content;
+    height: fit-content;
+    text-align: center;
+}
