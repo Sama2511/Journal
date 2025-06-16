@@ -3,15 +3,26 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-      font-family: "Source Code Pro", monospace;
+    font-family: "Source Code Pro", monospace;
+
+}
+.layout{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-areas: 
+    "nav"
+    "img"
+    "main"
+    "view"
+    "foot"
+    ;
 }
 
 nav{
+    grid-area: nav;
     display: flex;
-    margin: auto;
     justify-content: space-between;
-    width: 100%;
-    height: 5em;
+    padding: 1.5em 2em;
     position: sticky;
     top: 0;
     background-color: rgb(226, 222, 222);
@@ -46,13 +57,13 @@ i{
 }
 
 .img-section{
-    height:50%;
+    min-height: 50vh;
+    grid-area: img;
     width: 100%;
     background-image: url('images/desk.webp');
     background-size:cover;
     background-position: center;
     color: #FFF;
-    border: 1px solid red;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -61,7 +72,7 @@ i{
     width: 90%;
     margin:  0 auto;
     color: #FFF;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     text-shadow: 2px 2px 1px rgb(2, 2, 2);
 }
 .paragraph{
@@ -82,11 +93,12 @@ date{
 }
 
 main{
+    grid-area: main;
     width: 65%;
     margin: auto;
     margin-top: 3em;
     display: grid;
-    grid-template-columns: repeat(3 , 1fr) ;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
     gap: 3rem;
 }
 .container{
@@ -116,6 +128,7 @@ main{
 }
 
 .view-more{
+    grid-area: view;
     text-align: center;
     padding: 2em;
 }
@@ -125,9 +138,11 @@ main{
 }
 
 footer{
+    padding: 2em;
+    min-height: 80px;
+    grid-area: foot;
     background-color: #202020;
     color: white;
-    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,4 +158,16 @@ footer div{
     width:fit-content;
     height: fit-content;
     text-align: center;
+}
+
+@media (max-width: 500px) {
+    nav{
+        font-size: 0.5rem;
+        padding: 0.8em;
+    }
+    .paragraph {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+
 }
