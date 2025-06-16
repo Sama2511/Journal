@@ -17,7 +17,6 @@ body {
     "foot"
     ;
 }
-
 nav{
     grid-area: nav;
     display: flex;
@@ -92,7 +91,7 @@ date{
     margin-top: 0.4em;
 }
 
-main{
+.main-firstp{
     grid-area: main;
     width: 65%;
     margin: auto;
@@ -169,5 +168,67 @@ footer div{
         width: 100%;
         margin-bottom: 10%;
     }
+    i{
+        font-size: 1rem;
+    }
+    nav{
+        width: 100%;
+    }
+    .nav-btns{
+        font-size: 1rem;
+        gap: 1em;
+    }
 
 }
+
+/* HOME PAGE */
+
+.home-nav{
+    grid-area: nav2;    
+}
+.main-home{
+    grid-area: main2;
+    width: 90%;
+    margin: auto;
+    border: 5px solid red;
+
+}
+.main-home img{
+
+    width: 100%;
+    border-radius: 5px;
+
+}
+.recent-posts{
+    grid-area: post;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    gap: 3rem;
+    margin-bottom: 4em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    border: 5px solid red;
+}
+.home-footer{
+    grid-area: foot2;
+}
+.layout2{
+    min-height:100vh ;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas: 
+    'nav2'
+    'main2'
+    'post'
+    'foot2';
+}
+.recent-posts h3{
+    margin: 2.5em auto 1em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+}
+
+
