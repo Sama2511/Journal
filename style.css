@@ -4,8 +4,8 @@ body {
     padding: 0;
     height: 100vh;
     font-family: "Source Code Pro", monospace;
-
 }
+
 .layout{
     display: grid;
     grid-template-rows: auto auto 1fr auto auto;
@@ -160,7 +160,7 @@ footer div{
 @media (max-width: 500px) {
     nav{
         font-size: 0.5rem;
-        padding: 0.8em;
+        padding: 2em 0.8em;
     }
     .paragraph {
         width: 100%;
@@ -176,6 +176,7 @@ footer div{
         font-size: 1rem;
         gap: 1em;
     }
+
 
 }
 
