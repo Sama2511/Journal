@@ -274,29 +274,60 @@ footer div{
 .my-self{
     grid-area: self;
     display: flex;
-    border: 1px solid red;
-
+    width: 75%;
+    margin: 5em auto 4em ;
 }
+.about-me h1{
+    margin-bottom: 0.5em;
+}
+
 .my-self img{
     border-radius: 50%;
-    height: 40%;
+    width:15%;
+    margin-right: 1.5em;
 }
+
 
 .story-paragraph{
     grid-area: story;
+    width: 65%;
+    margin: 0 auto;
 }
 
 .title-posts2{
     grid-area: tpost;
+    margin: 0 auto;
+    margin: 5em auto 1em;
 }
 
 .recent-posts2{
     grid-area: posts;
+    width: 65%;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+    margin-bottom: 4em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 
 .aboutme-footer{
     grid-area: foot3;
+}
+
+@media (max-width:500px) {
+    .my-self{
+        display: block;
+        width: 90%;
+    }
+    .my-self img{
+        width: 50%;
+    }
+    .story-paragraph{
+        width: 90%;
+    }
+
 }
 
 
