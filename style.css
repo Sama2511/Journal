@@ -252,3 +252,51 @@ footer div{
 }
 
 
+/* ABOUT ME PAGE */
+
+.layout3{
+    display: grid;
+    grid-template-rows: auto auto auto auto 1fr auto;
+    grid-template-areas:
+    "nav3"
+    "self"
+    "story"
+    "tpost"
+    "posts"
+    "foot3";
+
+}
+
+.aboutme-nav{
+    grid-area: nav3;
+}
+
+.my-self{
+    grid-area: self;
+    display: flex;
+    border: 1px solid red;
+
+}
+.my-self img{
+    border-radius: 50%;
+    height: 40%;
+}
+
+.story-paragraph{
+    grid-area: story;
+}
+
+.title-posts2{
+    grid-area: tpost;
+}
+
+.recent-posts2{
+    grid-area: posts;
+}
+
+
+.aboutme-footer{
+    grid-area: foot3;
+}
+
+
